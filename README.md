@@ -20,3 +20,5 @@ Les données utilisées pour construire ce tableau de bord sont publiques  et vi
 
 ![Tableaux et statistiques](images/chrome_j2sYsSH75X.png)
 *Détail des résultats sur les lieux à proximité*
+
+###### Coût : 0 $ 
