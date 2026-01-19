@@ -37,7 +37,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-
 # ---------------------------------------------------------
 # Dictionnaires pour mapper les données
 # ---------------------------------------------------------
@@ -155,7 +154,14 @@ with st.container():
         selected_stop_name = st.selectbox("4. Arrêt", list(arrets_dict.keys()))
 
     with c5:
-        radius = st.number_input("5. Rayon de recherche (mètres)", min_value=50, max_value=2000, value=500, step=50)
+        #radius = st.number_input("5. Rayon de recherche (mètres)", min_value=50, max_value=2000, value=500, step=50)
+        radius = st.slider(
+            "5. Rayon de recherche (mètres)",
+            min_value=0,
+            max_value=2000,
+            value=500,
+            step=100
+        )
         
     with c6:
         lancer = st.button("Rechercher", type="primary", use_container_width=True)
