@@ -157,10 +157,8 @@ with st.container():
         #radius = st.number_input("5. Rayon de recherche (mètres)", min_value=50, max_value=2000, value=500, step=50)
         radius = st.slider(
             "5. Rayon de recherche (mètres)",
-            min_value=50,
-            max_value=2000,
-            value=500,
-            step=100
+            min_value=0,  max_value=2000, step=100,
+            value=500
         )
         
     with c6:
@@ -310,7 +308,7 @@ if st.session_state.map_data is not None:
                 with cols_ui[col_index]:
                     st.markdown(f"""
                     <div class="category-header">
-                        {groupe} ({count}) <span style="float:right; font-weight:normal; font-size:0.9em">Moy. {moyenne_dist:.0f}m</span>
+                        {groupe} ({count}) <span style="float:right; font-weight:normal; font-size:0.9em">Distance moy. {moyenne_dist:.0f}m</span>
                     </div>
                     """, unsafe_allow_html=True)
                     
